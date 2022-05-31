@@ -29,7 +29,7 @@ module LetterOpenerWebS3::MessageExtension
 
     def template
       letter_opener_path = $".select{|f| f.match(/letter_opener\/message.rb/)}.first
-      File.read(File.join(letter_opener_path.gsub('message.rb', ''), 'message.html.erb'))
+      File.read(File.join(letter_opener_path.gsub('message.rb', ''), 'templates/default.html.erb'))
     end
 
     def body
