@@ -34,7 +34,7 @@ module LetterOpenerWebS3::MessageExtension
 
     def body
       @body ||= begin
-        body = (@part || @mail).decoded
+        body = (@part || @mail)
 
         mail.attachments.each do |attachment|
           item = @attachments.select{|filename, _| filename == attachment.filename}.first
